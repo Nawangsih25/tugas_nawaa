@@ -7,10 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-<form   method="get"   action="chyby.php">
-        <p>nis <input name="nis" type="text"></p>
+<form   method="get"   action="ppdb">
+        <p>id <input name="id" type="no"></p>
         <p>Nama <input name="nama" type="text"></p>
-        <p>Kelas <input name="kelas" type="text"></p>
+        <p>asal <input name="asal" type="text"></p>
         <button type="sumbit">Simpan</button>
     </form>
 </body>
