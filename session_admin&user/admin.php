@@ -15,7 +15,15 @@
 <body>
 <h1>Berada di Halaman Admin </h1>
 <br>
-<a href="form.php"> Klik Log out</a>
 </body>
 </body>
 </html>
+
+<?php
+ 
+ session_start();
+ if(!isset($_SESSION["username"])){
+    header("Location:Login.php");
+ }
+
+ echo "<a href='beranda.php'>beranda</a>";
