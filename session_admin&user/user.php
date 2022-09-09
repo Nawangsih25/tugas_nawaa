@@ -1,30 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<style>
-    h1{
-        color :purple;
-    }
-    a{
-        color :pink;
-        background : black;
-    }
-   </style>
-    <title>Semangat belajar nawa</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-<h1>Berada di Halaman user </h1>
+    <h1 style="text-align:center;">Ini Beranda User</h1>
+    <br>
+    
+    <table border="1" cellpadding="10" cellspacing="0" class="table-primary table-striped">
+    <tr>
+        
+        <th>Username</th>
+        <th>Password</th>
+        <th>Role</th>
+    </tr>
+
 </body>
 </html>
 
 <?php
 
 session_start();
+
+
 if(!isset($_SESSION["username"])){
-   header("Location:Login.php");
+    header("Location:login.php");
 }
+echo "<a href='admin.php'>Kembali</a>";
+echo "<br>";
+echo "<a href='logout.php'>Logout</a>";
 
-echo "<a href='beranda.php'>beranda</a>";
+$koneksi = new PDO("mysql:host=localhost;dbname=rumahsakit",'root','');
+ $query = $koneksi->query('select * from user');
 
+ while ($data = $query->fetch() ) :?>
+<tr  style="text-align:center;" >
+    
+    <td><?= $data['username']?></td>
+    <td><?= $data['password']?></td>
+    <td><?= $data['role']?></td>
 
-?>
+            
+    </tr>
+
+    <?php endwhile ?>
