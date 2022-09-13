@@ -28,9 +28,7 @@
         <div>
            Password : <input type="password" name="password" id="">
         </div>
-        <div>
-           Password : <input type="number" name="id" id="">
-        </div>
+        <br>
         
         <button type="submit">Log in</button>
     </form>

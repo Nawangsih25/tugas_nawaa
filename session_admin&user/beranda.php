@@ -19,6 +19,8 @@
         <th>Username</th>
         <th>Password</th>
         <th>Role</th>
+        <th>update</th>
+        <th>delete</th>
     </tr>
 
     
@@ -51,18 +53,20 @@ $koneksi = new PDO("mysql:host=localhost;dbname=rumahsakit",'root','');
     <td><?= $data['username']?></td>
     <td><?= $data['password']?></td>
     <td><?= $data['role']?></td>
+    <td><a href="formedit.php?id=<?=$data['id']; ?>" class="table table-success table-striped">Update</a></td>
+    <td><a href="hapus.php?id=<?=$data['id']; ?>" class="table-danger">Hapus</a></td>
 
+    </tr>
             
         </a>
-        <br>
-</table>
         
     
-    <a href="formedit.php?id=<?=$data['id']; ?>" class="table table-success table-striped">Update</a>
+    
 
-        <a href="hapus.php?id=<?=$data['id']; ?>" class="table-danger">Hapus</a>
+        
     
     
-</table>
+
 
 <?php endwhile ?>
+</table>
