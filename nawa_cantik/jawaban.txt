@@ -1,0 +1,8 @@
+1. Apa itu 
+a. construktor
+b. destruktor
+
+jawab
+ a. construktor adalah method khusus yang akan di jalankan secara otomatis pada saat sebuah objek dibuat(instansiasi), yakni ketika perintah "new" dijalankan.
+
+ b. destruktor adalah method khusus yang di jalankan secara otomatis pada saat objek dihapus.di dalam php, seluruh objek sebenarnya sudah otomatis dihapus ketika halaman php selesai di proses.tetapi kita juga dapat menghaous objek secara manual.
