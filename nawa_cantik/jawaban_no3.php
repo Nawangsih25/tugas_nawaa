@@ -1,28 +1,27 @@
 <?php
-// buat class laptop
-class uangjajan {
+
+class sistem_minimarket {
   
-   private $uangmasuk;
-   private $uangkeluar;
+   private $namabarang;
+   private $hargabarang;
+   private $totalbelanja;
   
-   // constructor sebagai pembuat nilai awal
-   public function __construct($uangkeluar, $uangmasuk) {
-     $this->uangmasuk = $uangkeluar;
-     $this->uangkeluar = $uangmasuk;
+   public function __construct($namabarang, $hargabarang,$totalbelanja) {
+     $this->namabarang = $namabarang;
+     $this->hargabarang = $hargabarang;
+     $this->totalbelanja = $totalbelanja;
    }
   
    public function datapengeluaran() {
-     return "pengeluaran  $this->uangkeluar <br> pemasukan $this->uangmasuk <br>";
+     return " <h1>SELAMAT BERBELANJA</h1>belanja $this->namabarang <br> harga $this->hargabarang <br> total $this->totalbelanja";
    }
 }
+
+$sistem_minimarket_1= new sistem_minimarket("shampo", "21000","21000");
   
-// buat objek dari class laptop (instansiasi)
-$jajannawa= new uangjajan("100000", "20000");
-  
-echo $jajannawa->datapengeluaran();
+echo $sistem_minimarket_1->datapengeluaran();
 echo "<br />";
+$sistem_minimarket_1= new sistem_minimarket("sikat gigi", "15000","15000");
   
-$jajannawa= new uangjajan("50000", "15000");
-  
-echo $jajannawa->datapengeluaran();
+echo $sistem_minimarket_1->datapengeluaran();
 ?>
