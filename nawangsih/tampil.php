@@ -17,7 +17,7 @@
 
 <table border="1" cellpadding="10" cellspacing="0" class="table-success">
 <tr>
-    <th>id</th>
+    <th>nis</th>
     <th>Nama </th>
     <th>kelas</th>
     <th>update</th>
@@ -34,14 +34,14 @@
 
 while ($data = $query->fetch() ) :?>   
     <tr  style="text-align:center;" >
-    <td><?= $data['id']?></td>
+    <td><?= $data['nis']?></td>
     <td><?= $data['nama']?></td>
     <td><?= $data['kelas']?></td>
 
   
   
-    <td><a href="formupdate.php?id=<?=$data['id']; ?>" class="table table-success table-striped">Update</a></td>
-    <td><a href="delete.php?id=<?=$data['id']; ?>" class="table-danger">Hapus</a></td>
+    <td><a href="formupdate.php?nis=<?=$data['nis']; ?>" class="table table-success table-striped">Update</a></td>
+    <td><a href="delete.php?nis=<?=$data['nis']; ?>" class="table-danger">Hapus</a></td>
     </tr>
 
  

@@ -1,8 +1,8 @@
 <?php
 
-$id = $_GET['id'];
+$nis = $_GET['nis'];
 $database =new PDO("mysql:host=localhost;dbname=tbdatasiswa",'root','');
-$query = $database->query("select * from siswa where id=$id ");
+$query = $database->query("select * from siswa where nis=$nis ");
 $data = $query->fetch();
 
 ?>
@@ -18,9 +18,9 @@ $data = $query->fetch();
 <body>
 <div class="container">  
 <h1>Update Data</h1>
-    <form action="update.php?id=<?=$data['id']?>" method="post">
+    <form action="update.php?nis=<?=$data['nis']?>" method="post">
         <div>
-    <input type="hidden"  id="id" name ="id" value="<?= $data['id'] ?>" required></div>
+    <input type="hidden"  id="nis" name ="nis" value="<?= $data['nis'] ?>" required></div>
   
         <div>
             <label>Nama :</label>

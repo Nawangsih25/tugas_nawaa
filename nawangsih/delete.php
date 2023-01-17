@@ -1,9 +1,9 @@
 <?php
 
-    $id = $_GET['id'];
+    $nis = $_GET['nis'];
 
     $database = new PDO("mysql:host=localhost;dbname=tbdatasiswa",'root','');
-    $query = $database->query("delete from siswa where id='$id'");
+    $query = $database->query("delete from siswa where nis='$nis'");
 
     
     if($query){

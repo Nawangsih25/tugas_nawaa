@@ -25,7 +25,7 @@
     <h1> Silahkan lakukan regitrasi</h1>
 <form action="insert.php" method="POST">
         <div>
-        id: <input type="text" name="id"  required>
+        nis: <input type="text" name="nis"  required>
         </div>
         <br>
         <div>
