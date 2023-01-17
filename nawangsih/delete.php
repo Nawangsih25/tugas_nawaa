@@ -6,7 +6,7 @@
     $query = $database->query("delete from siswa where id='$id'");
 
     
-    // if($query){
-    //     header("Location:formdelete.php");
-    // }
+    if($query){
+        header("Location:tampil.php");
+    }
 ?>    
